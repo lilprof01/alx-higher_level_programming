@@ -10,5 +10,4 @@ if __name__ == "__main__":
     filtered_names.sort()
     for name in filtered_names:
 
-
         print(name)

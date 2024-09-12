@@ -16,5 +16,5 @@ def print_args(argc, argv):
         print("{} arguments:".format(argc))
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     print_args(len(sys.argv) - 1, sys.argv)

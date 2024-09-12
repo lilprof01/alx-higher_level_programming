@@ -8,7 +8,7 @@ def print_args(argc, argv):
     if argc == 1:
         print("{} argument:".format(argc))
     elif argc == 0:
-        print("{} arguments:".format(argc))
+        print("{} arguments.".format(argc))
     else:
         print("{} arguments:".format(argc))
 

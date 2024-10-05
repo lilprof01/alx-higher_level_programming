@@ -11,7 +11,28 @@ TypeError: b must be an integer
 >>> add_integer(2)
 100
 
->>> add_integer(2, [2, 5])
+>>> add_integer(-2, -3)
+-5
+
+>>> add_integer(-2, 7)
+5
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(0, 90)
+90
+
+>>> add_integer(2147483647, 9)
+2147483656
+
+>>> add_integer(-2147483647, 9)
+-2147483638
+
+>>> add_integer(-2147483647, -2147483647)
+-4294967294
+
+>>> add_integer(float('-inf'), 1)
 Traceback (most recent call last):
-TypeError: b must be an integer
+OverflowError: cannot convert float infinity to integer
 >>>

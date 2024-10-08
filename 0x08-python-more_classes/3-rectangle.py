@@ -89,4 +89,4 @@ class Rectangle:
                 rectangle_str += "#" * self.__width
             else:
                 rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str        
+        return rectangle_str

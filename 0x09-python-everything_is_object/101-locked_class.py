@@ -5,4 +5,4 @@
 class LockedClass:
     '''creates a locked class
     '''
-    __slot__ = ['first_name']
+    __slots__ = ['first_name']

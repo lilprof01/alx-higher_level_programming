@@ -2,6 +2,7 @@
 '''module contains class LockedClass
 '''
 
+
 class LockedClass:
     '''creates a locked class
     '''

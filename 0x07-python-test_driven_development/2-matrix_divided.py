@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     if not isinstance(matrix, list) or len(matrix[0]) == 0 \
-        or len(matrix) <= 1:
+            or len(matrix) <= 0:
         raise TypeError("matrix must be a matrix"
                         "(list of lists) of integers/floats")
     for i in matrix:
@@ -44,7 +44,7 @@ def matrix_divided(matrix, div):
         for j in i:
             if not isinstance(j, (int, float)):
                 raise TypeError("matrix must be a matrix"
-                                "(list of lists) of integers/floats")
+                                " (list of lists) of integers/floats")
             k = round(j / div, 2)
             new_row.append(k)
         new_matrix.append(new_row)

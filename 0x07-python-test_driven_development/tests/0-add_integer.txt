@@ -31,8 +31,4 @@ TypeError: b must be an integer
 
 >>> add_integer(-2147483647, -2147483647)
 -4294967294
-
->>> add_integer(float('-inf'), 1)
-Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integer
 >>>

@@ -2,10 +2,12 @@
 
 >>> add_integer("a", 2)
 Traceback (most recent call last):
+...
 TypeError: a must be an integer
 
 >>> add_integer(2, "b")
 Traceback (most recent call last):
+...
 TypeError: b must be an integer
 
 >>> add_integer(2)
@@ -31,4 +33,9 @@ TypeError: b must be an integer
 
 >>> add_integer(-2147483647, -2147483647)
 -4294967294
+
+>>> add_integer(float('-inf'), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
 >>>

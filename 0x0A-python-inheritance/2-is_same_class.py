@@ -6,7 +6,7 @@
 
 def is_same_class(obj, a_class):
     '''
-       function checks if obj is of a class
+       function checks if typ(obj) is of a class
     '''
     if type(obj) == a_class:
         return True

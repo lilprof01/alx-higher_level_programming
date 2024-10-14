@@ -6,7 +6,7 @@
 
 def is_kind_of_class(obj, a_class):
     '''
-       function checks if obj is a 
+       function checks if obj is a
     '''
 
     if isinstance(obj, a_class):

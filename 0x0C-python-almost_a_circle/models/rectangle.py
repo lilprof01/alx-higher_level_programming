@@ -84,3 +84,59 @@ class Rectangle(Base):
         """function returns area of rectangle
         """
         return self.__width * self.__height
+
+    def display(self):
+        """function displays the rectangle
+        """
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print("{:s}{:s}".format(" " * self.__x, "#" * self.__width))
+
+    def __str__(self):
+        """function displays string rep of rectangle
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """function updates attributes of rectagle with args
+        """
+        i = 0
+        if len(args) > 0:
+            for idx in args:
+                if i == 0:
+                    self.__id = idx
+                elif i == 1:
+                    self.__width = idx
+                elif i == 2:
+                    self.__height = idx
+                elif i == 3:
+                    self.__x = idx
+                elif i == 4:
+                    self.__y = idx
+                else:
+                    break
+                i += 1
+        else:
+
+            for idx in kwargs:
+                if idx == "id":
+                    self.__id = kwargs[idx]
+                elif idx == "width":
+                    self.__width = kwargs[idx]
+                elif idx == "height":
+                    self.__height = kwargs[idx]
+                elif idx == "x":
+                    self.__x = kwargs[idx]
+                elif idx == "y":
+                    self.__y = kwargs[idx]
+                else:
+                    break
+
+    def to_dictionary(self):
+        """return dictionary containing atributes of rectangle
+        """
+        array = ["id", "width", "height", "x", "y"]
+        dict = {}
+        for idx in array:
+            dict.update({idx: getattr(self, idx)})
+        return dict

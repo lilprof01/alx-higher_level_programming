@@ -4,12 +4,13 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     '''class Rectangle inheriting from Base'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''initialization of self'''
-        
+
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -95,7 +96,8 @@ class Rectangle(Base):
     def __str__(self):
         """function displays string rep of rectangle
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return f"[Rectangle] ({self.__id}) {self.__x}/{self.__y} \
+                 - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """function updates attributes of rectagle with args

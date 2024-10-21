@@ -6,6 +6,7 @@
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
     '''unittest for class Base
     '''
@@ -38,6 +39,7 @@ class TestBase(unittest.TestCase):
         '''tests for an instance with a set id'''
         a = Base(15)
         self.assertEqual(a.id, 15)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -106,15 +106,15 @@ class Rectangle(Base):
         if len(args) > 0:
             for idx in args:
                 if i == 0:
-                    self.__id = idx
+                    self.id = idx
                 elif i == 1:
-                    self.__width = idx
+                    self.width = idx
                 elif i == 2:
-                    self.__height = idx
+                    self.height = idx
                 elif i == 3:
-                    self.__x = idx
+                    self.x = idx
                 elif i == 4:
-                    self.__y = idx
+                    self.y = idx
                 else:
                     break
                 i += 1
@@ -122,15 +122,15 @@ class Rectangle(Base):
 
             for idx in kwargs:
                 if idx == "id":
-                    self.__id = kwargs[idx]
+                    self.id = kwargs[idx]
                 elif idx == "width":
-                    self.__width = kwargs[idx]
+                    self.width = kwargs[idx]
                 elif idx == "height":
-                    self.__height = kwargs[idx]
+                    self.height = kwargs[idx]
                 elif idx == "x":
-                    self.__x = kwargs[idx]
+                    self.x = kwargs[idx]
                 elif idx == "y":
-                    self.__y = kwargs[idx]
+                    self.y = kwargs[idx]
                 else:
                     break
 

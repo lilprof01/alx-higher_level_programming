@@ -11,12 +11,12 @@ class TestBase(unittest.TestCase):
     '''unittest for class Base
     '''
 
-    def setup(self):
+    def setUp(self):
         '''sets up Base for test'''
         Base._Base__nb_objects = 0
         pass
 
-    def teardown(self):
+    def tearDown(self):
         '''cleans up after each test'''
         pass
 
@@ -24,16 +24,16 @@ class TestBase(unittest.TestCase):
         '''Tests if nb_objects is a private class attribute'''
         self.assertTrue(hasattr(Base, "_Base__nb_objects"))
 
-    #def test_initialization(self):
-        #'''Tests if nb_objects initializes to zero on setup'''
-        #self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
+    def test_initialization(self):
+        '''Tests if nb_objects initializes to zero on setup'''
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
 
-    #def test_instance_without_setId(self):
-        #'''Tests instance without a set id'''
-        #a = Base()
-        #b = Base()
-        #self.assertEqual(a.id, 1)
-        #self.assertEqual(b.id, 2)
+    def test_instance_without_setId(self):
+        '''Tests instance without a set id'''
+        a = Base()
+        b = Base()
+        self.assertEqual(a.id, 1)
+        self.assertEqual(b.id, 2)
 
     def test_instance_with_setId(self):
         '''tests for an instance with a set id'''

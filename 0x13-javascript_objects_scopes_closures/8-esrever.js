@@ -5,7 +5,7 @@ exports.esrever = function (list) {
   let i = list.length;
 
   while (i > 0) {
-    reverseList.append(list[i - 1]);
+    reverseList.push(list[i - 1]);
     i--;
   }
   return reverseList;

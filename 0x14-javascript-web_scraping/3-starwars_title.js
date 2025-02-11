@@ -11,4 +11,3 @@ request(url, (err, response, body) => {
     console.log(JSON.parse(body).title);
   }
 });
-

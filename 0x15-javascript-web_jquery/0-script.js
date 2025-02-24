@@ -5,5 +5,5 @@
 
 window.onload = function updateColor () {
   const h = document.querySelector('header');
-  h.style.color = 'red';
+  h.style.color = '#FF0000';
 };
